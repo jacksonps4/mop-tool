@@ -1,0 +1,14 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="mop">
+        <jta-data-source>jdbc/mop</jta-data-source>
+        <class>com.minorityhobbies.mop.api.Mop</class>
+        <class>com.minorityhobbies.mop.api.MopAction</class>
+        <class>com.minorityhobbies.mop.api.MopActionVote</class>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+        </properties>
+    </persistence-unit>
+</persistence>
